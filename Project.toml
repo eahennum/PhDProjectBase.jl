@@ -1,0 +1,4 @@
+name = "AluCalcBase"
+uuid = "2099332a-be39-432a-8fbd-ba7e22fcc1f2"
+authors = ["Endre <endre.hennum@protonmail.com>"]
+version = "0.1.0"
