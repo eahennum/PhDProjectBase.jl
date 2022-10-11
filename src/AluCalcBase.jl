@@ -1,6 +1,6 @@
 module AluCalcBase
 
-export composition, diffcoeff, ElementNamedTuple
+export ElementNamedTuple, composition, diffcoeff, temperature
 
 const ElementNamedTuple = NamedTuple{names, <:Tuple{Vararg{Float64}}} where {names}
 
@@ -20,5 +20,13 @@ Returns the diffusion coefficient for element ´e´. If the element is not speci
 with all elements will be returned.
 """
 function diffcoeff end
+
+
+"""
+    temperature(x::Any)
+
+Returns the temperature in K for the object x.
+"""
+function temperature end
 
 end # module AluCalcBase
