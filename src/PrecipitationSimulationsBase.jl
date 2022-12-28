@@ -1,8 +1,8 @@
 module PrecipitationSimulationsBase
 
 export UNIV_GAS_CONST, BOLTZMANN, AVOGADRO, LATTICE_CONST_AL, MOLVOL_AL, AT_VOL_AL, 
-    BURGERS_VECTOR_AL, SHEAR_MODULUS_AL, ElementNamedTuple, composition, diffcoeff, 
-    temperature
+    BURGERS_VECTOR_AL, SHEAR_MODULUS_AL, ElementNamedTuple, MaterialState
+    composition, diffcoeff, temperature
 
 const ElementNamedTuple = NamedTuple{names, <:Tuple{Vararg{Float64}}} where {names}
 
