@@ -1,10 +1,7 @@
 module PrecipitationSimulationsBase
 
-export UNIV_GAS_CONST, BOLTZMANN, AVOGADRO, LATTICE_CONST_AL, MOLVOL_AL, AT_VOL_AL, 
-    BURGERS_VECTOR_AL, SHEAR_MODULUS_AL, ElementNamedTuple, MaterialState,
-    composition, diffcoeff, temperature
 
-const ElementNamedTuple = NamedTuple{names, <:Tuple{Vararg{Float64}}} where {names}
+const DynamicNamedTuple = NamedTuple{names, <:Tuple{Vararg{Float64}}} where {names}
 
 
 include("constants.jl")
@@ -34,8 +31,15 @@ Returns the temperature in K for the object x.
 """
 function temperature end
 
-
+include("composition.jl")
 include("material_state.jl")
 
 
-end # module AluCalcBase
+export UNIV_GAS_CONST, BOLTZMANN, AVOGADRO, LATTICE_CONST_AL, MOLVOL_AL, AT_VOL_AL, 
+    BURGERS_VECTOR_AL, SHEAR_MODULUS_AL, DynamicNamedTuple, MaterialState,
+    composition, diffcoeff, temperature
+
+export Composition
+
+
+end # module PrecipitationSimulationsBase

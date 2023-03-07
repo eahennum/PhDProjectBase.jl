@@ -3,9 +3,9 @@ Type to store the material properties for the matrix.
 """
 Base.@kwdef struct MaterialState
     "The chemical composition"
-    comp::ElementNamedTuple
-    "Diffusion coefficients"
-    diff_coeff::ElementNamedTuple
+    comp::DynamicNamedTuple
+    "Tracer diffusion coefficients"
+    diff_coeff::DynamicNamedTuple
     "Temperature in K"
     temperature::Float64
 end
