@@ -37,7 +37,7 @@ include("material_state.jl")
 
 export UNIV_GAS_CONST, BOLTZMANN, AVOGADRO, LATTICE_CONST_AL, MOLVOL_AL, AT_VOL_AL, 
     BURGERS_VECTOR_AL, SHEAR_MODULUS_AL, DynamicNamedTuple, MaterialState,
-    composition, diffcoeff, temperature
+    composition, diff_coeff, temperature
 
 export Composition
 
