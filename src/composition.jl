@@ -10,25 +10,15 @@ struct Composition
     end
 end
 
-Base.parent(ev::Composition) = getfield(ev, :values)
-Base.getindex(ev::Composition, sym::Symbol) = getindex(parent(ev), sym)
+Base.parent(c::Composition) = getfield(c, :values)
+Base.getindex(c::Composition, sym::Symbol) = getindex(parent(c), sym)
 Base.getindex(c::Composition, i) = getindex(parent(c), i) 
-# Base.getproperty(ev::Composition, sym::Symbol) = getproperty(parent(ev), sym)
-Base.keys(ev::Composition) = keys(parent(ev))
-Base.values(ev::Composition) = values(parent(ev))
+# Base.getproperty(c::Composition, sym::Symbol) = getproperty(parent(c), sym)
+Base.keys(c::Composition) = keys(parent(c))
+Base.values(c::Composition) = values(parent(c))
+Base.length(c::Composition) = length(parent(c))
 
-Base.show(io::IO, ev::Composition) = print(io, parent(ev))
-
-
-# """
-# """
-# function Composition(x::DynamicNamedTuple, ref::Symbol=:AL)
-#     xv = values(x)
-#     x_ref = 1 - sum(xv)
-#     x_ref < 0 && throw("Invalid concentrations. x_ref < 0: $x_ref")
-
-#     Composition(NamedTuple{(ref, keys(x)...)}((x_ref, xv...)))
-# end
+Base.show(io::IO, c::Composition) = print(io, parent(c))
 
 
 """
