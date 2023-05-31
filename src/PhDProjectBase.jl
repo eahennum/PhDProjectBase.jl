@@ -1,4 +1,4 @@
-module PrecipitationSimulationsBase
+module PhDProjectBase
 
 
 const DynamicNamedTuple = NamedTuple{names, <:Tuple{Vararg{Float64}}} where {names}
@@ -31,15 +31,20 @@ Returns the temperature in K for the object x.
 """
 function temperature end
 
+
+# Defines a "Composition" data type
 include("composition.jl")
+
+# Defines a "MaterialState" data type
 include("material_state.jl")
 
 
 export UNIV_GAS_CONST, BOLTZMANN, AVOGADRO, LATTICE_CONST_AL, MOLVOL_AL, AT_VOL_AL, 
-    BURGERS_VECTOR_AL, SHEAR_MODULUS_AL, DynamicNamedTuple, MaterialState,
-    composition, diff_coeff, temperature
+    BURGERS_VECTOR_AL, SHEAR_MODULUS_AL
+    
+export DynamicNamedTuple, composition, diff_coeff, temperature
 
-export Composition
+export Composition, MaterialState
 
 
 end # module PrecipitationSimulationsBase

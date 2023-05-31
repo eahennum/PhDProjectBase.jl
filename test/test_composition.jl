@@ -1,5 +1,5 @@
 using Test
-using PrecipitationSimulationsBase
+using PhDProjectBase
 
 function test_composition()
     x_mg = 0.0070
