@@ -9,9 +9,9 @@ abstract type AbstractPhase end
 
 # TODO: add documentation for these functions or 
 function phase_name end
-function constituents end
-function site_fractions end
-function n_atoms end
+constituents(p::AbstractPhase) = error("Not implemented")
+site_fractions(p::AsbtractPhase) = error("Not implemented")
+n_atoms(p::AbstractPhase) = sum(values(constituents(p)))
 
 
 """
@@ -36,6 +36,7 @@ function site_fraction(p::AbstractPhase, e::AbstractElement)
 
     site_fraction(p, es)
 end
+
 
 export AbstractPhase, phase_name, constituents, site_fractions, site_fraction, n_atoms 
 
