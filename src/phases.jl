@@ -1,3 +1,7 @@
+module Phases
+
+using PhDProjectBase.Elements
+
 """
 Docs to come here
 """
@@ -32,3 +36,7 @@ function site_fraction(p::AbstractPhase, e::AbstractElement)
 
     site_fraction(p, es)
 end
+
+export AbstractPhase, phase_name, constituents, site_fractions, site_fraction, n_atoms 
+
+end # module Phases

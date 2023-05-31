@@ -34,6 +34,7 @@ function temperature end
 
 # Defines types for elements (Al, Mg...)
 include("elements.jl")
+using .Elements
 
 # Defines a "Composition" data type
 include("composition.jl")
@@ -43,6 +44,7 @@ include("material_state.jl")
 
 # Defines the "AbstractPhase" type
 include("phases.jl")
+using .Phases
 
 
 export UNIV_GAS_CONST, BOLTZMANN, AVOGADRO, LATTICE_CONST_AL, MOLVOL_AL, AT_VOL_AL, 
@@ -57,6 +59,5 @@ export Composition
 export MaterialState
 
 export AbstractPhase, phase_name, constituents, site_fractions, n_atoms
-
 
 end # module PhDProjectBase

@@ -1,3 +1,5 @@
+module Constants
+
 # Natural constants
 "The gas constant"
 const UNIV_GAS_CONST = 8.314456
@@ -7,7 +9,6 @@ const BOLTZMANN = 1.38064852e-23
 
 "Avogadro number - (mol⁻¹)"
 const AVOGADRO = 6.02214076e23
-
 
 # Material constants for aluminium
 "Lattics constant for aluminium"
@@ -24,3 +25,8 @@ const BURGERS_VECTOR_AL = LATTICE_CONST_AL/sqrt(2)
 
 "Shear modulus for aluminium "
 const SHEAR_MODULUS_AL = 26e9
+
+export UNIV_GAS_CONST, BOLTZMANN, AVOGADRO, LATTICE_CONST_AL, MOLVOL_AL, AT_VOL_AL, 
+    BURGERS_VECTOR_AL, SHEAR_MODULUS_AL
+
+end # module Constants
