@@ -9,8 +9,20 @@ abstract type AbstractPhase end
 
 # TODO: add documentation for these functions or 
 function phase_name end
-constituents(p::AbstractPhase) = error("Not implemented")
-site_fractions(p::AsbtractPhase) = error("Not implemented")
+
+"""
+Docs to come here
+"""
+constituents(::AbstractPhase) = error("Not implemented")
+
+"""
+Docs to come here
+"""
+site_fractions(::AbstractPhase) = error("Not implemented")
+
+"""
+Docs to come here
+"""
 n_atoms(p::AbstractPhase) = sum(values(constituents(p)))
 
 
