@@ -76,7 +76,7 @@ function effective_diffusion_coefficient(x::Composition, d, p::AbstractPhase)
     xm = NamedTuple{e}(parent(x))
     de = NamedTuple{e}(d)
 
-    _effective_diffusion_coefficient(xp, xm, de)
+    effective_diffusion_coefficient(xp, xm, de)
 end
 
 
