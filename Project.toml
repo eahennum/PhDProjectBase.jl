@@ -1,4 +1,4 @@
 name = "PhDProjectBase"
 uuid = "2099332a-be39-432a-8fbd-ba7e22fcc1f2"
 authors = ["Endre <endre.hennum@hydro.com>"]
-version = "0.1.2"
+version = "0.1.3"
